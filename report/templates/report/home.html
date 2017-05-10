@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Aulas Limpias.
+{% endblock title %}
+
+{% block content %}
+
+        <!-- Jumbotron Header -->
+        <div class="jumbotron hero-spacer">
+            <h1 class="text-center" id="tipo">Aulas Limpias</h1>
+            <br/>
+            <h2 class="text-center" id="tipo2"><strong>Actúa y contribuye a limpiar el acoso en las aulas.</strong></h2>
+            <h3 class="text-center" id="tipo2">No importa quién eres sino qué está pasando.</h3>
+            <h3 class="text-center" id="tipo2">Promueve el cambio ahora de forma totalmente anónima.</h3>
+            <p>
+            <br/>
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <a class="btn btn-group-justified btn-lg  btn-primary " id="actua" href="{% url 'create_report' %}"><strong>¡ACTÚA!</strong></a>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                </div>
+
+            </p>
+        </div>
+{% endblock content %}
+
+{% block features%}
+  <!-- Title -->
+        <div class="row">
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Page Features -->
+        <div class="row text-center">
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://i.imgur.com/xCjkAye.jpg" alt="">
+                    <div class="caption">
+                        <h3><strong>Registro de Centros.</strong></h3>
+                        <p align="justify"><strong>Inscribe tu centro de enseñanza para poder gestionar los reportes.</strong></p>
+                        <p>
+                            <a href="#" id="boton" class="btn btn-primary">Regístrate</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://i.imgur.com/K3WMGFS.jpg" alt="">
+                    <div class="caption">
+                        <h3 href="#"><strong>Estadísticas</strong></h3>
+                        <p align="justify"><strong>Aquí podrás ver la evolución de los casos de acoso a nivel regional y estatal.</strong></p>
+                        <p>
+                            <a href="#" id="boton" class="btn btn-primary">Ver más</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 hero-feature">
+                <div class="thumbnail">
+                    <img src="http://i.imgur.com/MZDcSnI.jpg" alt="">
+                    <div class="caption">
+                        <h3><strong>Conócenos</strong></h3>
+                        <p align="justify"><strong>¿Quieres saber más sobre nosotros?¿Tienes alguna sugerencia?</strong></p>
+                        <p>
+                            <a href="#" id="boton" class="btn btn-primary">Contacta</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+{% endblock features%}

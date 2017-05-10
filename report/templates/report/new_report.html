@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Nuevo reporte.
+{% endblock title %}
+
+{% block content %}
+
+         <!-- Page Content -->
+<div class="jumbotron jumbotron-fluid" xmlns="http://www.w3.org/1999/html">
+        <div class="container">
+            <br/>
+            <!--Denuncia-->
+                <div class="row">
+                    <br class="col-md-12" >
+                    <h2 class="text-center"> <strong>Informa aquí de una incidencia</strong></h2>
+                        <br/>
+                        <p align="justify">Bienvenido, lo primero de todo es agradecer tu ayuda. Al colaborar con Aulas Limpias estás haciendo de este mundo un lugar mejor.
+Remarcar que esta solicitud es anónima, no habrá manera de identificarte a no ser que especifiques tu nombre en la descripción de la incidencia. Tu dirección IP tampoco será almacenada.
+Es importante que guardes en algún lugar la clave que se te proporcionará al finalizar la solicitud pues será la única manera en la que podrás consultar el estado de tu solicitud.
+                        </p><p>Haz un uso responsable de esta plataforma, de lo contrario estarás contribuyendo a agrandar el problema y harás que paliar el acoso escolar se convierta en una tarea imposible.
+</p>
+<br/>
+                    <form method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <div class="controls">
+                                          {{ form.school.errors }}
+                                          <label> Centro de estudios: </label>
+                                          {{ form.school }}
+                                          <!--input type="text" name="centro" class="form-control" id="centro" placeholder="Nombre..." value=""-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <div class="controls">
+                                        {{ form.name_victim.errors }}
+                                        <label>Nombre de la persona afectada: </label>
+                                        {{ form.name_victim }}
+                                        <!--input type="text" name="name" class="form-control" id="name" placeholder="Texto..." rows="5" cols="30" value=""-->
+                                    </div>
+                                 </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                 <div class="control-group form-group">
+                                    <div class="controls">
+                                        {{ form.level.errors }}
+                                        <label>Clase: </label>
+                                        {{ form.level }}
+                                        <!--input type="text" name="level" class="form-control" id="name" placeholder="Texto..." rows="5" cols="30" value="{{ form.level }}"-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="control-group form-group">
+                                    <div class="controls">
+                                        <label>Email: </label>
+                                        <input type="text" name="email" class="form-control" id="name" placeholder="Texto..." rows="5" cols="30">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                             <div class="control-group form-group">
+                                <div class="controls">
+                                    {{ form.description.errors }}
+                                    <label>Cuentanos tu denuncia: </label>
+                                    {{ form.description }}
+                                    <!--textarea class="form-control" name="description" rows="6" value=""></textarea-->
+
+                                </div>
+
+                                <br/>
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <label>Adjunta un archivo: </label>
+                                    <input  class="form-control" type="submit" value="Subir una imagen" name="submit">
+
+
+                                </div>
+                            </div>
+
+
+                            <div class="control-group form-group">
+                                <div class="controls">
+                                    <input  class="form-control" type="submit" value="Subir un archivo de audio" name="submit">
+
+                                </div>
+                            </div>
+                        <button type="submit" class="btn btn-default">Enviar</button>
+                        <button type="reset" class="btn btn-default">Borrar</button>
+
+                             </div>
+                    </form>
+                </div>
+             </div>
+        </div>
+    </div>
+
+
+{% endblock content %}
+
+{% block features%}
+
+{% endblock features%}
